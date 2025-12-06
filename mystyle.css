@@ -32,3 +32,110 @@ header{
     font-weight: bold;
     color: white;
 }
+
+#hero{
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fff0db;
+}
+
+/*menu*/
+.menu{
+    padding:40px 20px;
+    background-color: #e3dfdb;
+    text-align: center;
+}
+.menu-grid{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.menu-item{
+    background-color: white;
+    width:250px;
+    padding:20px;
+    box-shadow: 0 0 20px black;
+    border-radius: 5px;
+}
+
+.menu-item img{
+    width:100%;
+}
+
+.price{
+        font-weight: bold;
+        color: orange;
+}
+
+/*gallery*/
+
+.gallery{
+    padding: 40px 20px;
+    text-align: center;
+}
+.gallery-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:20px;
+    margin-top: 20px;
+}
+.gallery-grid img{
+    width:100%;
+}
+
+.gallery-grid img:hover{
+    scale: 1.1;
+}
+.video{
+    aspect-ratio: 16/9;
+    width: 100%;
+    max-width: 150px;
+}
+
+.reservation{
+    background-color: white;
+    max-width: 550px;
+    padding: 30px;
+    margin: 40px auto;
+    border-radius: 4px;
+
+}
+
+.reservation h2{
+    text-align: center;
+    color: #333;
+    margin-top: 12px;
+    margin-bottom: 20px;
+
+}
+.form-group{
+    /*add content later*/
+}
+
+
+
+
+
+/*Responsive design*/
+@media (min-width:601px) and (max-width:1024px){
+    .menu-item, img{
+        width: 45%;    
+}
+    .gallery-grid{
+    grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .menu-grid{
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-item{
+        width: 80%
+    }
+    .gallery-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
